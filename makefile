@@ -1,6 +1,7 @@
 # Change src to the name of your C file.
 # If you are having issues with Make complaing about spacing, make sure the 
 # indents below are tabs i.e. \t rather then spaces.
+
 src=lab15
 
 clean:
