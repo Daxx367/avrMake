@@ -4,6 +4,9 @@
 
 src=lab15
 
+
+.PHONY: clean
+
 clean:
 	rm $(src).o $(src).elf $(src).hex
 
