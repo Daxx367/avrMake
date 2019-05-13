@@ -7,11 +7,17 @@ It requires the following:
     make
     
 To use:
+    Add your user to dialout - `sudo usermod -a -G dialout username` Note: you may need to relog for this to take effect.
     Note: It is best to have a new directory for each project.
     Place this file in the project directory.
-    Change the src value to the name of your .c value (With out .c).
-    Run make flash this will build and flash the file to the AVR
-        If you just want to compile the .c file run make hex (this will make the hex file ready for flashing).
-    To clean the directory of unneeded files run make clean.
+    Modify the Makefile to point to the desired directories.
+    Make an object direcrory, by default call this obj.
+    `make` will compile and link your program and attempt to flash to the avr.
+    `make flash` will only attempt to flash.
+    `make clean` will remove all object files and the output.hex.
 
 This is currently set for the ATMEGA324A you will need to change both the -mmcu and the -p in avr-gcc and avrdude respectivly.
+
+WARNINGS:
+
+DO NOT DISCONNECT/POWEROFF THE AVR DURING FLASHING, YOU CAN SET A FUSE AND MAKE YOUR LIFE DIFFICULT!
