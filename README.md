@@ -1,14 +1,14 @@
-#About
+# About
 This is a basic make file to allow for the easy flashing of AVR Micros from Linux or OSX.
 
-##Requirements
+## Requirements
 It requires the following:
 - avr-gcc
 - avr-libc
 - avrdude
 - make
     
-##Usage
+## Usage
 1. (Not sure if required for OSX) Add your user to dialout - `sudo usermod -a -G dialout username` Note: you may need to relog for this to take effect.
 2. Note: It is best to have a new directory for each project.
 3. Place this file in the project directory.
@@ -21,5 +21,5 @@ It requires the following:
 
 This is currently set for the ATMEGA324A you will need to change both the -mmcu and the -p in avr-gcc and avrdude respectivly.
 
-##WARNINGS
+## WARNINGS
 DO NOT DISCONNECT/POWEROFF THE AVR DURING FLASHING, YOU CAN SET A FUSE AND MAKE YOUR LIFE DIFFICULT!
