@@ -36,6 +36,13 @@ To use the scripts remember to make them executable with chmod +x name_of_script
 ```./recover_fuses_atmega324a.sh```
 - dont use this unless you are sure you have witten to some undesired fuses, I suggest using ATMEL studio to attempt to reset the fuses first
 
+## Note on linting in VScode 
+If you wish to have linting working in VScode, you will need to point it to the include folder of avr-libc.
+For me this was ```/usr/avr/include/``` but this may differ on your distribution.
+If you add /yourAvrInclude/** to the "Include path" of VScodes C/C++ Configurations this will allow for the use of AVR related headers.
+i.e. ```/usr/avr/include/**``` in the "Include path" box leaving any existing values there as they allow it to find headers in the working directory.
 
+Then in the Defines add ```__AVR_ATmega324A__``` this will tell the linter to add this to the top of every file.
+This is needed as this would normaly be done by the -mmcu command of the avr-gcc, at linking/ compile time.
 
 
