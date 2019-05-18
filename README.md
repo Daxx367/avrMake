@@ -20,7 +20,8 @@ It requires the following:
 
 - ```make``` will compile and link your program and attempt to flash to the avr.
 - ```make build``` will only build the .hex.
-- ```make flash``` will only attempt to flash.
+- ```make flash``` will only erase the flash memeory and attempt to write the new hex, will not erase eeprom.
+- ```make erase``` will erase all flash and eeprom memory.
 - ```make clean``` will remove all object files and the output.hex.
 
 This is currently set for the ATMEGA324A you will need to change both the -mmcu and the -p in avr-gcc and avrdude respectivly.
