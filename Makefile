@@ -51,8 +51,10 @@ translate: $(TARGET).elf
 	$(info translated $< to $(TARGET).hex)
 
 flash:
-	avrdude -e -p m324pa -c stk600 -P /dev/ttyACM0 -e -F -U flash:w:$(TARGET).hex
+	avrdude -p m324pa -c stk600 -P /dev/ttyACM0 -F -U flash:w:$(TARGET).hex
 
+erase:
+	avrdude -p m324pa -c stk600 -P /dev/ttyACM0 -F -e
 
 .PHONY: clean
 
