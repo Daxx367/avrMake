@@ -46,4 +46,7 @@ i.e. ```/usr/avr/include/**``` in the "Include path" box leaving any existing va
 Then in the Defines add ```__AVR_ATmega324A__``` this will tell the linter to add this to the top of every file.
 This is needed as this would normaly be done by the -mmcu command of the avr-gcc, at linking/ compile time.
 
+## Posible issue on OSX
+If you are having an issue saying command is only avaiable in c99 mode add ```-std=c99``` to the end of line 3.
+
 
